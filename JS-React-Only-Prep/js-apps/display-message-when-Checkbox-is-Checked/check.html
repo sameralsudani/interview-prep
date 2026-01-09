@@ -1,0 +1,34 @@
+<!-- Display message when Checkbox is Checked -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      Choose
+      <input type="checkbox" id="abc" onclick="checkMe()" />
+
+      <p id="msg">Hello Ali</p>
+    </form>
+  </body>
+
+  <script>
+    function checkMe() {
+      const checkBox = document.getElementById("abc");
+      const message = document.getElementById("msg");
+      if (checkBox.checked === true) {
+        message.style.display = "block";
+      } else {
+        message.style.display = "none";
+      }
+    }
+  </script>
+</html>

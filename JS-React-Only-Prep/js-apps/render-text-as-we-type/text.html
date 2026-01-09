@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      Ali <input type="text" input id="ali" /> <br />
+      Result <input type="text" id="result" />
+    </form>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let ali = document.getElementById("ali");
+        const result = document.getElementById("result");
+
+        ali.addEventListener("input", showValue);
+        // Or
+        // ali.oninput = showValue;
+      });
+
+      function showValue() {
+        result.value = ali.value;
+        //Or
+        // result.value = this.value;  // this refers to object ali
+      }
+    </script>
+  </body>
+</html>
